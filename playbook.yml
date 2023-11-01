@@ -1,0 +1,17 @@
+---
+- hosts: web
+  become: yes
+  become_user: root
+  connection: ssh
+  tasks:
+    - name: install nginx
+      yum:
+        name: nginx
+        state: latest
+        update_cache: true
+
+    - name: start nginx
+      service:
+        name: nginx
+        enabled: yes
+        state: started
