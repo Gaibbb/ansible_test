@@ -1,1 +1,1 @@
-# For Ansible & Terraform stury
+# For Ansible & Terraform study
